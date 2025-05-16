@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#info">Info</a>
+        </nav>
+
+        <!-- Interactive Button -->
+        <section class="interactive-section">
+            <h1>Interactive Demo</h1>
+            <button id="action-btn">Click Me!</button>
+            <p id="action-text">Interact with the button (click, hover, or double-click)!</p>
+            <input type="text" id="keypress-input" placeholder="Type here to detect keypress">
+        </section>
+
+        <!-- Image Slideshow -->
+        <section class="gallery">
+            <h2>Image Gallery</h2>
+            <div class="slideshow">
+                <img src="https://images.pexels.com/photos/2486168/pexels-photo-2486168.jpeg" alt="Nature 1" class="slide active">
+                <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" alt="Nature 2" class="slide">
+                <img src="https://images.pexels.com/photos/162140/pexels-photo-162140.jpeg" alt="Nature 3" class="slide">
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+        </section>
+
+        <!-- Accordion -->
+        <section class="accordion">
+            <h2>Learn More</h2>
+            <div class="accordion-item">
+                <button class="accordion-title">What is this?</button>
+                <div class="accordion-content">This is an interactive webpage built with JavaScript!</div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-title">Features</button>
+                <div class="accordion-content">Includes event handling, slideshow, and form validation.</div>
+            </div>
+        </section>
+
+        <!-- Form -->
+        <section class="form-section">
+            <h2>Register</h2>
+            <form id="registration-form" novalidate>
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <span class="error" id="name-error"></span>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <span class="error" id="email-error"></span>
+
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <span class="error" id="password-error"></span>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
